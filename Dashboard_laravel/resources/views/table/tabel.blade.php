@@ -1,7 +1,8 @@
-@extends('layouts.adminlte')
+@extends('layouts.master')
 
-@section('title', 'Halaman Table')
-
+@section('judul')
+Tabel
+@endsection
 @section('content')
     <table class="table table-bordered">
   <thead>                  
