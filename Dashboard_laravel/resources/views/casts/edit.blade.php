@@ -20,4 +20,9 @@ Halaman Utama
     @enderror
     <button type="submit">Simpan Perubahan</button>
 </form>
+<form action="/cast/{{ $cast->id }}" method="POST">
+    @csrf
+    @method('DELETE')
+    <button type="submit">Hapus</button>
+</form>
 @endsection
