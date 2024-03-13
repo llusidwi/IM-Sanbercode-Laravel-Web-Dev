@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('casts', function (Blueprint $table) {
+        Schema::create('perans', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('film_id');
+            $table->unsignedBigInteger('cast_id');
+            $table->string('nama');
+            $table->foreign('film_id')->references('id')->on('films');
+            $table->foreign('cast_id')->references('id')->on('casts');
             $table->timestamps();
         });
     }
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('casts');
+        Schema::dropIfExists('perans');
     }
 };

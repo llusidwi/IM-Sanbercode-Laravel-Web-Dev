@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('kritiks', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('film_id');
+            $table->text('content');
+            $table->integer('point');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('film_id')->references('id')->on('films');
             $table->timestamps();
         });
     }

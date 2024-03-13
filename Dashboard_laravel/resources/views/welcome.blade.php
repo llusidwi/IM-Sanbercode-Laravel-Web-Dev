@@ -3,5 +3,5 @@
 Halaman Utama
 @endsection
 @section('content')
-<p> hai ini halaman utama</p>
+<p> Hai, ini halaman utama</p>
 @endsection
